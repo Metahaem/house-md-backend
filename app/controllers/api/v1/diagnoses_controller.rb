@@ -34,7 +34,7 @@ class Api::V1::DiagnosesController < ApplicationController
     private
   
     def diagnosis_params
-      params.require(:diagnosis).permit(:symptom_ids, :issue_id)
+      params.require(:diagnosis).permit(:symptom_id, :issue_id)
     end
   
     def find_diagnosis

@@ -7,8 +7,8 @@ class Api::V1::IssuesController < ApplicationController
         @issue = Issue.find(params[:id])
       end
     
-      def symptoms_ids
-        self.diagnoses.symptom_ids
-      end
+    #   def symptoms_id
+    #     self.diagnoses.symptom_id
+    #   end
       
 end

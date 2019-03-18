@@ -266,12 +266,7 @@ def create_issues
 end
 
 def create_symptoms
-  @all_symptoms = @array_of_disease_hashes.map do
-    |disease| disease[:disease_symptoms]
-    end
-  @all_symptoms.flatten!.uniq!.sort!
-
-  @all_symptoms.each { |s| Symptom.create(name: s, category: @symptoms_and_categories[:s]) }
+    @symptoms_and_categories.each {|symptom, bodypart| Symptom.create!(name: symptom, category: bodypart)}
 end
 
 def create_diagnoses
@@ -280,7 +275,9 @@ def create_diagnoses
     symptom_arr = h[:disease_symptoms].map do |symptom_name|
       Symptom.find_by(name: symptom_name)
     end
-    Diagnosis.create(symptom_ids: symptom_arr.map(&:id), issue_id: issue.id)
+    symptom_arr.each do |s|
+        Diagnosis.create(symptom_id: s.id, issue_id: issue.id)
+    end
   end
 
 end
