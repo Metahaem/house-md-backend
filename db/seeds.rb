@@ -244,7 +244,7 @@ It's most recognisable by the painful swellings at the side of the face under th
       "Swollen glands": "All",
       "Tight Chest": "Chest",
       "Tinnitus": "Head",
-      "Ulcers on soles of feet": "Limbs",
+      "Ulcers on soles of feet": "Legs",
       "Unable to gain weight": "All",
       "Uncontrollable twitches": "All",
       "Unusually firm or floppy muscles": "All",
@@ -252,7 +252,7 @@ It's most recognisable by the painful swellings at the side of the face under th
       "Vertigo": "Head",
       "Watering eyes": "Head",
       "Weak arms or legs": "Limbs",
-      "Weakened grip": "Limbs",
+      "Weakened grip": "Arms",
       "Weight loss": "All",
       "Wheezing": "Chest",
       "White patches in the mouth": "Head"}

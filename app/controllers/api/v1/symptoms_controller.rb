@@ -15,7 +15,11 @@ class Api::V1::SymptomsController < ApplicationController
 
     def all_symptoms_from_category
         bodypart = params[:category]
-        symptoms = Symptom.all.select{|s| s.category.downcase==bodypart}
+        if bodypart == "arms" || bodypart == "legs"
+            symptoms = Symptom.all.select{|s| s.category.downcase==bodypart || s.category.downcase=="limbs"}
+        else
+            symptoms = Symptom.all.select{|s| s.category.downcase==bodypart} 
+        end
         render json: symptoms
     end
         
